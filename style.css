@@ -1,0 +1,142 @@
+@import url("https://use.typekit.net/bsu5cuc.css");
+
+:root {
+  --primary-color: #396766;
+  --accent-color: #ff6969;
+  --bg-color: #8FB7B7;
+  --text-font: schnebel-sans-pro, sans-serif;
+  --heading-font: "turnip", serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  font-family: var(--text-font);
+}
+
+#kitchen {
+  position: relative;
+  width: 70vw;
+  height: 70vh;
+  background-image: url('images/fridge.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+.food-item {
+  position: absolute;
+  font-size: 2rem;
+  cursor: grab;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+#controls select,
+#controls button {
+  padding: 5px;
+  margin: 5px;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#tooltip {
+  position: absolute;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border-radius: 5px;
+  display: none;
+  z-index: 100;
+  font-size: 1.5rem;
+  font-family: var(--heading-font);
+  max-width: 500px;
+}
+
+.grayed-out {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.food-item img {
+  max-height: 14vh;
+  object-fit: fill;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 7vh;
+  color: var(--primary-color);
+}
+
+.highlighted img {
+  filter: sepia(1) hue-rotate(0deg) saturate(3);
+}
+
+#cuisine-suggestion {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  max-width: 500px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  border: 2px solid var(--accent-color);
+  text-align: center;
+  font-weight: 700;
+}
+
+#cuisine-suggestion h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: var(--accent-color);
+}
+
+#cuisine-suggestion p {
+  font-size: 1.2em;
+  color: #8FB7B7;
+}
+
+#cuisine-suggestion img {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#filter {
+  appearance: none;
+  padding: 8px 12px;
+  font-size: 1em;
+  border: 2px solid var(--accent-color);
+  border-radius: 6px;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#filter:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+#filter option {
+  background-color: #fff;
+  color: #555;
+}
